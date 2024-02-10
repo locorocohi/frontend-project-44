@@ -8,5 +8,9 @@
   },
   "type": "module",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+}
+
 }
