@@ -3,6 +3,7 @@
 console.log('Welcome to the Brain Games!')
 
 import input from '../src/cli.js'
+console.log("What's your name?")
 const userName = input()
 console.log(`Hello, ${userName}!`)
 
@@ -21,13 +22,13 @@ for(let number of numbers) {
     temp ='no'
     }
 
-input()
+let answer = input()
 
-    if (input === temp) {
+    if (answer === temp) {
     correctAnswer = correctAnswer + 1
     console.log('Correct!')
     } else {
-    console.log(`"${input}" is wrong answer ;(. Correct answer was ${temp}.`)
+    console.log(`"${answer}" is wrong answer ;(. Correct answer was ${temp}.`)
     console.log(`Let's try again, ${userName}!`)
     break
 }
