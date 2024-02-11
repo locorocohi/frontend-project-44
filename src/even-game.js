@@ -17,7 +17,13 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
 let correctAnswer = 0
 let temp = ''
-let numbers = [13, 4, 16]
+
+let numbers = []
+for (let i = 0; i <= 3; i += 1){
+    numbers.push(Math.floor((Math.random() * (100 - 1) + 1)))
+}
+
+
 for(let number of numbers) {
     console.log(`Question: ${number}`)
 
