@@ -1,3 +1,4 @@
+import getRndInteger from '../getRndInt.js'
 import readlineSync from 'readline-sync';
 
 const input = () => {
@@ -20,7 +21,7 @@ let temp = ''
 
 let numbers = []
 for (let i = 0; i <= 3; i += 1){
-    numbers.push(Math.floor((Math.random() * (100 - 1) + 1)))
+    numbers.push(getRndInteger(0, 99))
 }
 
 
