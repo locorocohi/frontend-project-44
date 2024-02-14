@@ -11,7 +11,7 @@ const getQA = () => {
     randomFirstNumber += randomIncrement
     progression.push(String(randomFirstNumber));
   }
-  const positionOfCorrect = getRndInt(0, (progression.length - 1));
+  const positionOfCorrect = getRndInt(1, (progression.length - 1));
   const correctAnswer = progression[positionOfCorrect];
   progression[positionOfCorrect] = '..';
   const question = progression.join(' ');
