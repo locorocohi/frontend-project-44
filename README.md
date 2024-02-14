@@ -7,3 +7,5 @@
 <a href="https://asciinema.org/a/HjmmJbuV4Ic235ldDgTkeGwaU">Наибольший общий делитель</a>
 
 <a href="https://asciinema.org/a/3GdwZ9ejfHwJZSzQIJvRvXpI4">Пропущенное число в прогрессии</a>
+
+<a href="https://asciinema.org/a/DExWfRBATeL48BMswKa85lXLU">Простые числа</a>

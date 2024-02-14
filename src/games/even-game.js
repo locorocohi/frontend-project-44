@@ -9,7 +9,7 @@ return name
 const game = () => {
 
 console.log('Welcome to the Brain Games!')
-console.log("What's your name?")
+console.log("May I have your name?")
 const userName = input()
 console.log(`Hello, ${userName}!`)
 

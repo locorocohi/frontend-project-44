@@ -3,7 +3,7 @@ export const getRndInt = (min, max) => { // RANDOM
   return result;
 };
 
-export const nod = (a, b) => {
+export const nod = (a, b) => { //Наибольший делитель
   let c;
   if (a > b) {
     while (b !== 0) {
@@ -19,3 +19,16 @@ export const nod = (a, b) => {
 };
 
 
+export const isThisPrime = (number) => { // Проверка на простоту
+  if (number <= 1 || number === 9) {
+    return 'no';
+  } else if (number === 2) {
+    return 'yes'
+  }
+for ( let i = 2; i < number; i += 1 ) {
+  if (number % i === 0 ) {
+    return 'no'
+}
+return 'yes'
+}
+}
