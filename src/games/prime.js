@@ -1,5 +1,6 @@
-import { getRndInt, isThisPrime } from '../utils.js';
+import { getRndInt } from '../utils.js';
 import runGame from '../index.js';
+import isThisPrime from '../isThisPrime.js'
 
 const desc = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
