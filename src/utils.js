@@ -3,31 +3,34 @@ export const getRndInt = (min, max) => { // RANDOM
   return result;
 };
 
-export const nod = (a, b) => { // Наибольший делитель
-  let c;
-  if (a > b) {
-    while (b !== 0) {
-      c = b;
-      b = a % b;
-      a = c;
+/* export const nod = (firstNum, secondNum) => { // Наибольший делитель
+  let thirdNum;
+  if (firstNum > secondNum) {
+    while (secondNum !== 0) {
+      thirdNum = secondNum;
+      secondNum = firstNum % secondNum;
+      firstNum = thirdNum;
     }
   }
-  if (a < b) {
-    return nod(b, a);
+  if (firstNum < secondNum) {
+    return nod(secondNum, firstNum);
   }
-  return c;
+  return thirdNum;
+}; */
+
+export const nod = (a, b) => {
+  if (a < b) return nod(b, a);
+  if (b === 0) return a;
+  return nod(b, a % b);
 };
 
-export const isThisPrime = (number) => { // Проверка на простоту
-  if (number <= 1 || number === 9) {
-    return 'no';
-  } if (number === 2) {
-    return 'yes';
-  }
-  for (let i = 2; i < number; i += 1) {
-    if (number % i === 0) {
-      return 'no';
-    }
-    return 'yes';
-  }
+export const isThisPrime = (number) => {
+  if (number < 2) return false;
+  const stop = number / 2;
+  const iter = (counter) => {
+    if (counter > stop) return true;
+    if (number % counter === 0) return false;
+    return iter(counter + 1);
+  };
+  return iter(2);
 };
