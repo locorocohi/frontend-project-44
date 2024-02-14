@@ -17,3 +17,5 @@ export const nod = (a, b) => {
   }
   return c;
 };
+
+

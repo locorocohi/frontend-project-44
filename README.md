@@ -5,3 +5,5 @@
 <a href="https://asciinema.org/a/PbxX5ZljxX4C1zJB12jione3W">Калькулятор</a>
 
 <a href="https://asciinema.org/a/HjmmJbuV4Ic235ldDgTkeGwaU">Наибольший общий делитель</a>
+
+<a href="https://asciinema.org/a/3GdwZ9ejfHwJZSzQIJvRvXpI4">Пропущенное число в прогрессии</a>
