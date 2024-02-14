@@ -1,53 +1,21 @@
 import { getRndInt } from '../utils.js'
-import readlineSync from 'readline-sync';
+import runGame from '../index.js'
 
-const input = () => {
-const name = readlineSync.question('Your answer: ');
-return name
-}
-
-const game = () => {
-
-console.log('Welcome to the Brain Games!')
-console.log("May I have your name?")
-const userName = input()
-console.log(`Hello, ${userName}!`)
-
-console.log('Answer "yes" if the number is even, otherwise answer "no".')
-
-
-let correctAnswer = 0
-let temp = ''
-
-let numbers = []
-for (let i = 0; i <= 3; i += 1){
-    numbers.push(getRndInt(0, 99))
-}
-
-
-for(let number of numbers) {
-    console.log(`Question: ${number}`)
-
+const isEven = (number) => {
     if (number % 2 === 0) {
-    temp = 'yes'
+    return 'yes'
     } else {
-    temp ='no'
+    return 'no'
     }
+}
+const desc = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-let answer = input()
+const getQA = () => {
+const numbers = getRndInt(0, 99)
+const question = `${numbers}`;
+const correctAnswer = isEven(numbers);
 
-    if (answer === temp) {
-    correctAnswer = correctAnswer + 1
-    console.log('Correct!')
-    } else {
-    console.log(`"${answer}" is wrong answer ;(. Correct answer was ${temp}.`)
-    console.log(`Let's try again, ${userName}!`)
-    break
-}
-}
+  return [question, correctAnswer];
+};
 
-if (correctAnswer === 3) {
-    console.log(`Congratulations, ${userName}!`)
-}
-}
-export default game
+export default () => runGame(desc, getQA);
