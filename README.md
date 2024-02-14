@@ -3,3 +3,5 @@
 <a href="https://asciinema.org/a/1VzT7eXEpCZFaUpMxaOexlgQ1">Четные числа</a>
 
 <a href="https://asciinema.org/a/PbxX5ZljxX4C1zJB12jione3W">Калькулятор</a>
+
+<a href="https://asciinema.org/a/HjmmJbuV4Ic235ldDgTkeGwaU">Наибольший общий делитель</a>
