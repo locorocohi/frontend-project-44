@@ -3,8 +3,17 @@ export const getRndInt = (min, max) => { // RANDOM
   return result;
 };
 
-export const nod = (a, b) => { // Общий делитель 
-  if (a < b) return nod(b, a);
-  if (b === 0) return a;
-  return nod(b, a % b);
+export const nod = (a, b) => {
+  let c;
+  if (a > b) {
+    while (b !== 0) {
+      c = b;
+      b = a % b;
+      a = c;
+    }
+  }
+  if (a < b) {
+    return nod(b, a);
+  }
+  return c;
 };

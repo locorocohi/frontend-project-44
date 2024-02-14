@@ -1,4 +1,4 @@
-import getRndInteger from '../getRndInt.js'
+import { getRndInt } from '../utils.js'
 import readlineSync from 'readline-sync';
 
 const input = () => {
@@ -21,7 +21,7 @@ let temp = ''
 
 let numbers = []
 for (let i = 0; i <= 3; i += 1){
-    numbers.push(getRndInteger(0, 99))
+    numbers.push(getRndInt(0, 99))
 }
 
 

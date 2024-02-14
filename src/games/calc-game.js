@@ -1,4 +1,4 @@
-import getRndInt from '../utils.js'
+import { getRndInt } from '../utils.js'
 import runGame from '../index.js'
 
     const gameDescription = 'What is the result of the expression?';
