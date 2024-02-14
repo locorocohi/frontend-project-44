@@ -24,7 +24,7 @@ export const nod = (a, b) => {
   return nod(b, a % b);
 };
 
-export const isThisPrime = (number) => {
+/* export const isThisPrime = (number) => {
   if (number < 2) return false;
   const stop = number / 2;
   const iter = (counter) => {
@@ -33,4 +33,6 @@ export const isThisPrime = (number) => {
     return iter(counter + 1);
   };
   return iter(2);
-};
+}; */
+
+
