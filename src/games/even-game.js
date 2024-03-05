@@ -1,4 +1,4 @@
-import { getRndInt } from '../utils.js';
+import { getRandomInteger } from '../utils.js';
 import runGame from '../index.js';
 
 const isEven = (number) => {
@@ -10,7 +10,7 @@ const isEven = (number) => {
 const desc = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getQA = () => {
-  const numbers = getRndInt(0, 99);
+  const numbers = getRandomInteger(0, 99);
   const question = `${numbers}`;
   const correctAnswer = isEven(numbers);
 

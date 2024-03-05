@@ -1,17 +1,17 @@
-import { getRndInt } from '../utils.js';
+import { getRandomInteger } from '../utils.js';
 import runGame from '../index.js';
 
 const desc = 'What number is missing in the progression?';
 
 const getQA = () => {
-  let randomFirstNumber = getRndInt(1, 90);
-  const randomIncrement = getRndInt(1, 9);
+  let randomFirstNumber = getRandomInteger(1, 90);
+  const randomIncrement = getRandomInteger(1, 9);
   const progression = [randomFirstNumber];
-  for (let i = 0; i < getRndInt(5, 10); i += 1) {
+  for (let i = 0; i < getRandomInteger(5, 10); i += 1) {
     randomFirstNumber += randomIncrement;
     progression.push(String(randomFirstNumber));
   }
-  const positionOfCorrect = getRndInt(1, (progression.length - 1));
+  const positionOfCorrect = getRandomInteger(1, (progression.length - 1));
   const correctAnswer = progression[positionOfCorrect];
   progression[positionOfCorrect] = '..';
   const question = progression.join(' ');

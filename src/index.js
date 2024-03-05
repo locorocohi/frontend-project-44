@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const countRounds = 3;
+const roundsCount = 3;
 
 const runGame = (gameDescription, getGameData) => {
   console.log('Welcome to the Brain Games!');
@@ -8,7 +8,7 @@ const runGame = (gameDescription, getGameData) => {
   console.log(`Hello, ${userName}!`);
   console.log(gameDescription);
 
-  for (let i = 0; i < countRounds; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const gameData = getGameData();
     const question = gameData[0];
     const correctAnswer = gameData[1];
