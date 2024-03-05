@@ -9,9 +9,7 @@ const runGame = (description, generateRound) => {
   console.log(description);
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const gameData = generateRound();
-    const question = gameData[0];
-    const correctAnswer = gameData[1];
+    const [question, correctAnswer] = generateRound();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
 
