@@ -1,18 +1,12 @@
 import { getRandomInteger } from '../utils.js';
 import runGame from '../index.js';
 
-const isEven = (number) => {
-  if (number % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
-};
 const desc = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getQA = () => {
   const numbers = getRandomInteger(0, 99);
-  const question = `${numbers}`;
-  const correctAnswer = isEven(numbers);
+  const question = numbers.toString();
+  const correctAnswer = numbers % 2 === 0 ? 'yes' : 'no';
 
   return [question, correctAnswer];
 };

@@ -3,10 +3,10 @@ export const getRandomInteger = (min, max) => {
   return result;
 };
 
-export const nod = (a, b) => {
-  if (a < b) return nod(b, a);
+export const getGCD = (a, b) => {
+  if (a < b) return getGCD(b, a);
   if (b === 0) return a;
-  return nod(b, a % b);
+  return getGCD(b, a % b);
 };
 
 export const checkForPrime = (number) => {

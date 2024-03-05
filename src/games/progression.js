@@ -11,9 +11,9 @@ const getQA = () => {
     randomFirstNumber += randomIncrement;
     progression.push(String(randomFirstNumber));
   }
-  const positionOfCorrect = getRandomInteger(1, (progression.length - 1));
-  const correctAnswer = progression[positionOfCorrect];
-  progression[positionOfCorrect] = '..';
+  const hiddenIndex = getRandomInteger(1, (progression.length - 1));
+  const correctAnswer = progression[hiddenIndex];
+  progression[hiddenIndex] = '..';
   const question = progression.join(' ');
 
   return [question, correctAnswer];
