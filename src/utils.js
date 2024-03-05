@@ -21,3 +21,14 @@ export const checkForPrime = (number) => {
   }
   return true;
 };
+
+export const makeProgression = () => {
+  let randomFirstNumber = getRandomInteger(1, 90);
+  const randomIncrement = getRandomInteger(1, 9);
+  const progression = [];
+  for (let i = 0; i < getRandomInteger(5, 10); i += 1) {
+    randomFirstNumber += randomIncrement;
+    progression.push(String(randomFirstNumber));
+  }
+  return progression;
+};
