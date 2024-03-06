@@ -6,15 +6,16 @@
   Welcome to the page with one of the best games of recent years.
   <br>
 </h2>
-<code>
+
+```js
 if (it is not on the list of the best) {
-   it is on the list of good ones, because I made it myself,
-   and I am not an employee of Ubisoft.                     
+   return 'it is on the list of good ones, because I made it myself,
+   and I am not an employee of Ubisoft.'                     
 }
-</code>
+```
 <br>
 <h3 align="center">
-  Of course, I may be exaggerating. However, you can rate it yourself
+  Of course, I may be exaggerating. However, you can rate it yourself.
 </h3>
 <h4 align="center">Click on the game name to see it in action</h4>
 <p align="center">
@@ -22,7 +23,7 @@ if (it is not on the list of the best) {
   <a href="#calculator">Calculator</a> |
   <a href="#gcd">Greatest Common Divisor</a> |
   <a href="#progression">Progression</a> |
-  <a href="#primenumbers">Prime Numbers</a> |
+  <a href="#primenumbers">Prime Numbers</a>
 </p>
 <br>
 <br>
@@ -51,6 +52,14 @@ if (it is not on the list of the best) {
 <p>- In this game you need to recognize prime numbers.</p>
 <p>- A prime is a natural number greater than 1 that has no positive divisors other than 1 and itself.</p>
 <p>- If the proposed number is even, answer "yes", otherwise answer "no".</p>
+<br>
+<br>
+<h2>How to install</h2>
+
+```
+make instal
+```
+<a>There are 3 rounds of every game by default. You can change it in <code>src/index.js</code>.</a>
 <br>
 <br>
 <h2 assign="center"><a href="#top">BACK TO THE BEGINNING</a></h2>
