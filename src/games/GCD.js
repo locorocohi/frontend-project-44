@@ -5,10 +5,7 @@ const desc = 'Find the greatest common divisor of given numbers.';
 
 const getQA = () => {
   const firstArgument = getRandomInteger(1, 100);
-  let secondArgument = getRandomInteger(1, 100);
-  if (secondArgument === firstArgument) {
-    secondArgument = getRandomInteger(1, 100);
-  }
+  const secondArgument = getRandomInteger(1, 100);
   const question = `${firstArgument} ${secondArgument}`;
   const correctAnswer = String(getGCD(firstArgument, secondArgument));
 

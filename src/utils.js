@@ -4,6 +4,7 @@ export const getRandomInteger = (min, max) => {
 };
 
 export const getGCD = (a, b) => {
+  if (a === b) return b;
   if (a < b) return getGCD(b, a);
   if (b === 0) return a;
   return getGCD(b, a % b);
