@@ -4,23 +4,16 @@ import runGame from '../index.js';
 const gameDescription = 'What is the result of the expression?';
 
 const calculate = (number1, number2, operator) => {
-  let result = null;
-
   switch (operator) {
     case '+':
-      result = number1 + number2;
-      break;
+      return number1 + number2;
     case '-':
-      result = number1 - number2;
-      break;
+      return number1 - number2;
     case '*':
-      result = number1 * number2;
-      break;
+      return number1 * number2;
     default:
       throw new Error(`Unknown operator: ' ${operator} '!`);
   }
-
-  return result;
 };
 
 const getGameData = () => {
