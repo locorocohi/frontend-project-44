@@ -1,17 +1,30 @@
-import { getRandomInteger, checkForPrime } from '../utils.js';
+import getRandomNumber from '../utils.js';
 import runGame from '../index.js';
 
-const desc = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-const getQA = () => {
-  const question = getRandomInteger(0, 9);
-  let correct;
-  if (checkForPrime(question)) {
-    correct = 'yes';
-  } else {
-    correct = 'no';
+const isPrime = (number) => {
+  if (number <= 1) {
+    return false;
   }
-  return [question, correct];
+
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
 };
 
-export default () => runGame(desc, getQA);
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const generateRound = () => {
+  const question = getRandomNumber(0, 9);
+  let answer;
+  if (isPrime(question)) {
+    answer = 'yes';
+  } else {
+    answer = 'no';
+  }
+  return [question, answer];
+};
+
+export default () => runGame(description, generateRound);
