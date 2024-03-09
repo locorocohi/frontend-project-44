@@ -16,7 +16,7 @@ const desc = 'What number is missing in the progression?';
 
 const generateRound = () => {
   const progression = makeProgression();
-  const hiddenIndex = getRandomNumber(1, (progression.length - 1));
+  const hiddenIndex = getRandomNumber(1, progression.length - 1);
   const answer = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
   const question = progression.join(' ');
