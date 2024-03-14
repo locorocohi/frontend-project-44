@@ -18,12 +18,7 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 const generateRound = () => {
   const question = getRandomNumber(0, 9);
-  let answer;
-  if (isPrime(question)) {
-    answer = 'yes';
-  } else {
-    answer = 'no';
-  }
+  const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
