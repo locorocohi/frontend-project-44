@@ -1,22 +1,22 @@
 import getRandomNumber from '../utils.js';
 import runGame from '../index.js';
 
-let randomFirstNumber = getRandomNumber(1, 90);
-const randomIncrement = getRandomNumber(1, 20);
-
-const makeProgression = () => {
+const makeProgression = (randomFirstNumber, randomIncrement) => {
   const progression = [];
-  for (let i = 0; i < getRandomNumber(5, 10); i += 1) {
+  for (let i = 0; i < 8; i += 1) {
+    // eslint-disable-next-line no-param-reassign
     randomFirstNumber += randomIncrement;
     progression.push(String(randomFirstNumber));
   }
   return progression;
 };
 
-const desc = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const generateRound = () => {
-  const progression = makeProgression();
+  const randomFirstNumber = getRandomNumber(1, 90);
+  const randomIncrement = getRandomNumber(1, 20);
+  const progression = makeProgression(randomFirstNumber, randomIncrement);
   const hiddenIndex = getRandomNumber(1, progression.length - 1);
   const answer = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
@@ -25,4 +25,4 @@ const generateRound = () => {
   return [question, answer];
 };
 
-export default () => runGame(desc, generateRound);
+export default () => runGame(description, generateRound);
